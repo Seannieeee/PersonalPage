@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sean - College Student & Developer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="profile.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Sean</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+            <div class="mobile-menu" id="mobileMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="section">
+            <div class="container">
+                <div class="hero-content fade-in">
+                    <div class="hero-image">
+                        <div class="profile-picture">
+                            <img src="seanprofilepic.jpg" alt="Sean's Profile Picture" class="profile-img">
+                        </div>
+                    </div>
+                    <div class="hero-text">
+                        <h1>Hi, I'm Sean</h1>
+                        <p class="subtitle">College Student & Aspiring Developer</p>
+                        <p>
+                            I'm a 3rd Year College Student at Gordon College taking the Bachelor of Science in Information Technology.
+                        </p>
+                        <div class="cta-buttons">
+                            <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                            <a href="#projects" class="btn btn-secondary">View My Work</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section animate-on-scroll">
+            <div class="container">
+                <div class="about-content">
+                    <h2 class="section-title">About Me</h2>
+                    <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 2rem;">
+                        I'm currently a student studying various types of programming skills
+                    </p>
+                    
+                    <div class="skills-grid">
+                        <div class="skill-item"><i class="fab fa-html5 skill-icon" style="color: #e34f26;"></i><span class="skill-name">HTML5</span></div>
+                        <div class="skill-item"><i class="fab fa-css3-alt skill-icon" style="color: #1572b6;"></i><span class="skill-name">CSS3</span></div>
+                        <div class="skill-item"><i class="fab fa-js-square skill-icon" style="color: #f7df1e;"></i><span class="skill-name">JavaScript</span></div>
+                        <div class="skill-item"><i class="fab fa-java skill-icon" style="color: #007396;"></i><span class="skill-name">Java</span></div>
+                        <div class="skill-item"><i class="fab fa-php skill-icon" style="color: #777bb4;"></i><span class="skill-name">PHP</span></div>
+                        <div class="skill-item"><i class="fab fa-react skill-icon" style="color: #61dafb;"></i><span class="skill-name">React.js</span></div>
+                        <div class="skill-item"><i class="fas fa-database skill-icon" style="color: #336791;"></i><span class="skill-name">SQL</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section animate-on-scroll">
+            <div class="container">
+                <h2 class="section-title">My Projects (Template)</h2>
+                <div class="projects-grid">
+                    <div class="project-card" onclick="openProject('ecommerce')">
+                        <div class="project-preview"><i class="fas fa-shopping-cart"></i></div>
+                        <h3 class="project-title">E-Commerce Platform</h3>
+                        <p class="project-description">Template</p>
+                        <div class="project-tech"><span class="tech-tag">React.js</span><span class="tech-tag">Node.js</span><span class="tech-tag">MongoDB</span></div>
+                    </div>
+                    
+                    <div class="project-card" onclick="openProject('weather')">
+                        <div class="project-preview"><i class="fas fa-cloud-sun"></i></div>
+                        <h3 class="project-title">Weather Dashboard</h3>
+                        <p class="project-description">Template</p>
+                        <div class="project-tech"><span class="tech-tag">JavaScript</span><span class="tech-tag">CSS3</span><span class="tech-tag">API</span></div>
+                    </div>
+                    
+                    <div class="project-card" onclick="openProject('taskmanager')">
+                        <div class="project-preview"><i class="fas fa-tasks"></i></div>
+                        <h3 class="project-title">Task Manager</h3>
+                        <p class="project-description">Template</p>
+                        <div class="project-tech"><span class="tech-tag">React.js</span><span class="tech-tag">PHP</span><span class="tech-tag">MySQL</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section animate-on-scroll">
+            <div class="container">
+                <div class="about-content">
+                    <h2 class="section-title">Let's Connect (Sample Email, No Database Yet)</h2>
+                    <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 2rem;">
+                        Get in touch with me through the form below or connect on social media.
+                    </p>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="success-message" id="successMessage">
+                            Message Received.
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                            <div class="error-message">Please enter your name.</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                            <div class="error-message">Please enter a valid email address.</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" placeholder="Tell me about your project or just say hello!" required></textarea>
+                            <div class="error-message">Please enter your message.</div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i>
+                            Send Message
+                        </button>
+                    </form>
+                    
+                    <div class="social-cards">
+                        <a href="https://www.linkedin.com/in/sean-romeo-aureo-901b68334" class="social-card linkedin" target="_blank">
+                            <i class="fab fa-linkedin-in social-card-icon"></i>
+                            <div class="social-card-title">LinkedIn</div>
+                            <div class="social-card-description">Professional networking</div>
+                        </a>
+                        <a href="https://github.com/Seannieeee" class="social-card github" target="_blank">
+                            <i class="fab fa-github social-card-icon"></i>
+                            <div class="social-card-title">GitHub</div>
+                            <div class="social-card-description">Code repositories</div>
+                        </a>
+                        <a href="https://www.facebook.com/seanromeo.aureo" class="social-card facebook" target="_blank">
+                            <i class="fab fa-facebook-f social-card-icon"></i>
+                            <div class="social-card-title">Facebook</div>
+                            <div class="social-card-description">Social Media</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="profile.js"></script>
+</body>
+</html>
